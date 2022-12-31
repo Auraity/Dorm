@@ -18,4 +18,19 @@ public class RecordServiceImpl implements RecordService {
     public List<Record> findRecordsBySearchType(String startDate, String endDate, String dormBuildId, String searchType, String keyword) {
         return recordDao.findRecordsBySearchType(startDate,endDate,dormBuildId,searchType,keyword);
     }
+
+    @Override
+    public Record findRecordById(String id) {
+        return recordDao.findRecordById(id);
+    }
+
+    @Override
+    public int updateRecord(String id, String stuCode, String date, String remark) {
+        return recordDao.updateRecord(id, stuCode, date, remark);
+    }
+
+    @Override
+    public int addRecord(String stuCode, String date, String remark) {
+        return recordDao.addRecord(stuCode,date,remark);
+    }
 }

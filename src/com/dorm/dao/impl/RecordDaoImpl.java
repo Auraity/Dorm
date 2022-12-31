@@ -95,4 +95,94 @@ public class RecordDaoImpl implements RecordDao {
         }
         return null;
     }
+
+    @Override
+    public Record findRecordById(String id) {
+        Connection conn = null;
+        PreparedStatement ps = null;
+        ResultSet rs = null;
+        try {
+            conn = DBUtils.getConnection();
+            String sql = "select r.*,u.stu_code from tb_record r,tb_user u where r.id = ? and r.student_id = u.id";
+            ps = conn.prepareStatement(sql);
+            ps.setString(1,id);
+            rs = ps.executeQuery();
+            if (rs.next()){
+                User user = new User();
+                user.setStuCode(rs.getString("u.stu_code"));
+                return new Record(rs.getInt(1),
+                        rs.getInt(2),
+                        rs.getDate(3),
+                        rs.getString(4),
+                        rs.getInt(5),
+                        user);
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }finally {
+            close(rs,ps,conn);
+        }
+        return null;
+    }
+
+    @Override
+    public int updateRecord(String id, String stuCode, String date, String remark) {
+        Connection conn = null;
+        PreparedStatement ps = null;
+        try {
+            conn = DBUtils.getConnection();
+            String sql = "update tb_user u,tb_record r set u.stu_code = ?,r.date = ?,r.remark = ? where u.id = r.student_id and r.id = ?";
+            ps = conn.prepareStatement(sql);
+            ps.setString(1,stuCode);
+            ps.setString(2,date);
+            ps.setString(3,remark);
+            ps.setString(4,id);
+            int i = ps.executeUpdate();
+            return i;
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }finally {
+            close(null,ps,conn);
+        }
+    }
+
+    @Override
+    public int addRecord(String stuCode, String date, String remark) {
+        Connection conn = null;
+        PreparedStatement ps = null;
+        try {
+            conn = DBUtils.getConnection();
+            String sql = "insert into tb_record(student_id,date,remark) values (?,?,?)";
+            ps = conn.prepareStatement(sql);
+            ps.setString(1,getStudentID(stuCode));
+            ps.setString(2,date);
+            ps.setString(3,remark);
+            int i = ps.executeUpdate();
+            return i;
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }finally {
+            close(null,ps,conn);
+        }
+    }
+    private String getStudentID(String stuCode){
+        Connection conn = null;
+        PreparedStatement ps = null;
+        ResultSet rs = null;
+        try {
+            conn = DBUtils.getConnection();
+            String sql = "select id from tb_user where stu_code = ?";
+            ps = conn.prepareStatement(sql);
+            ps.setString(1,stuCode);
+            rs = ps.executeQuery();
+            if (rs.next()){
+                return rs.getString(1);
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }finally {
+            close(rs,ps,conn);
+        }
+        return null;
+    }
 }
