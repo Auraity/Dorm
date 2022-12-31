@@ -77,7 +77,7 @@ function onblurFn(oldPassWord){
 						<input type="submit" class="btn btn-primary" value="提交"/>
 					</div>
 					<div align="center">
-						<font id="error" color="red"></font>
+						<font id="error" color="red">${error}</font>
 					</div>
 			</div>
 		</form>

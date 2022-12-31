@@ -9,6 +9,10 @@ public class DormBuild {
     public DormBuild() {
     }
 
+    public DormBuild(String name) {
+        this.name = name;
+    }
+
     public DormBuild(Integer id, String name, String remark, Integer disabled) {
         this.id = id;
         this.name = name;

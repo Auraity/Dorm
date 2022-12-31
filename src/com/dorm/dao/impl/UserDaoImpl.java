@@ -349,25 +349,18 @@ public class UserDaoImpl implements UserDao {
         Connection conn=null;
         PreparedStatement ps=null;
         ResultSet rs=null;
-        List<User> users=new ArrayList<>();
         try {
 //            1、注册驱动和获取连接
             conn= DBUtils.getConnection();
-
 //            2、数据库操作对象
             String sql="SELECT password FROM tb_user WHERE id=?";
             ps=conn.prepareStatement(sql);//预编译
             ps.setInt(1,id);
 //            3、执行sql语句
             rs=ps.executeQuery();
-
 //            4、处理查询结果集
             if (rs.next()) {
-//                将查询的结果封装到User实体中
-//                User user = new User();
-//                user.setPassword(rs.getString("password"));
-                String pwd=rs.toString();
-                return pwd;
+                return rs.getString("password");
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -378,7 +371,7 @@ public class UserDaoImpl implements UserDao {
     }
 
     @Override
-    public void setNewPassword(String newPassword,Integer id) {
+    public int setNewPassword(String newPassword,Integer id) {
         Connection conn=null;
         PreparedStatement ps=null;
         try {
@@ -390,12 +383,13 @@ public class UserDaoImpl implements UserDao {
             ps=conn.prepareStatement(sql);//预编译
             ps.setString(1,newPassword);
             ps.setInt(2,id);
-            ps.executeUpdate();
-
+            int i = ps.executeUpdate();
+            return i;
         } catch (SQLException e) {
             e.printStackTrace();
         }finally {
             close(null,ps,conn);
         }
+        return 0;
     }
 }

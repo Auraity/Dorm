@@ -25,9 +25,15 @@ public class DormBuildServlet extends HttpServlet {
 //        1、接收请求
         String action=request.getParameter("action");
         if ("list".equals(action)){
+            String id = request.getParameter("id");
 //            查询所有用户
 //            2、调用相应服务
-            List<DormBuild> dormBuilds=dormBuildService.getAllDormBuild();
+            List<DormBuild> dormBuilds = new ArrayList<>();
+            if (id == null) {
+                dormBuilds = dormBuildService.getAllDormBuild();
+            }else{
+                dormBuilds.add(dormBuildService.findDormBuildById(Integer.parseInt(id)));
+            }
             request.setAttribute("builds",dormBuilds);
             request.setAttribute("buildSelects",dormBuilds);
 

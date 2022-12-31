@@ -122,10 +122,12 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public void changePassword(String oldPassword, String newPassword, Integer id) {
+    public int changePassword(String oldPassword, String newPassword, Integer id) {
         String oldPwd=userDao.findOldPassword(id);
         if (oldPwd.equals(oldPassword)){
-            userDao.setNewPassword(newPassword,id);
+            return userDao.setNewPassword(newPassword,id);
+        }else{
+            return -1;
         }
     }
 }

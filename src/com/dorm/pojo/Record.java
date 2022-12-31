@@ -9,15 +9,30 @@ public class Record {
     private String remark;
     private int disabled;
 
+    private User user;
+
     public Record() {
     }
 
-    public Record(int id, int studentId, Date date, String remark, int disabled) {
+    public Record(int id, int studentId, Date date, String remark, int disabled, User user) {
         this.id = id;
         this.studentId = studentId;
         this.date = date;
         this.remark = remark;
         this.disabled = disabled;
+        this.user = user;
+    }
+
+    @Override
+    public String toString() {
+        return "Record{" +
+                "id=" + id +
+                ", studentId=" + studentId +
+                ", date=" + date +
+                ", remark='" + remark + '\'' +
+                ", disabled=" + disabled +
+                ", user=" + user +
+                '}';
     }
 
     public int getId() {
@@ -60,14 +75,11 @@ public class Record {
         this.disabled = disabled;
     }
 
-    @Override
-    public String toString() {
-        return "Record{" +
-                "id=" + id +
-                ", studentId=" + studentId +
-                ", date=" + date +
-                ", remark='" + remark + '\'' +
-                ", disabled=" + disabled +
-                '}';
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
     }
 }

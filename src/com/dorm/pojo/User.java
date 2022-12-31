@@ -14,9 +14,19 @@ public class User {
     private Integer roleId;//角色id，0：超级管理员；1：宿舍管理员；2：学生
     private Integer createUserId;//创建着id
     private Integer disabled;//用户状态，0：激活；1：停用
+
+    private DormBuild dormBuild;
     private List<DormBuild> dormBuilds;
 
     public User() {
+    }
+
+    public User(String name, String stuCode, String sex, String dormCode,DormBuild dormBuild) {
+        this.name = name;
+        this.stuCode = stuCode;
+        this.sex = sex;
+        this.dormCode = dormCode;
+        this.dormBuild = dormBuild;
     }
 
     public User(Integer id, String name, String password, String stuCode, String dormCode, String sex, String tel, Integer dormBuildId, Integer roleId, Integer createUserId, Integer disabled) {
@@ -33,12 +43,31 @@ public class User {
         this.disabled = disabled;
     }
 
-    public void setId(Integer id) {
-        this.id = id;
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", password='" + password + '\'' +
+                ", stuCode='" + stuCode + '\'' +
+                ", dormCode='" + dormCode + '\'' +
+                ", sex='" + sex + '\'' +
+                ", tel='" + tel + '\'' +
+                ", dormBuildId=" + dormBuildId +
+                ", roleId=" + roleId +
+                ", createUserId=" + createUserId +
+                ", disabled=" + disabled +
+                ", dormBuild=" + dormBuild +
+                ", dormBuilds=" + dormBuilds +
+                '}';
     }
 
     public Integer getId() {
         return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public String getName() {
@@ -121,28 +150,19 @@ public class User {
         this.disabled = disabled;
     }
 
+    public DormBuild getDormBuild() {
+        return dormBuild;
+    }
+
+    public void setDormBuild(DormBuild dormBuild) {
+        this.dormBuild = dormBuild;
+    }
+
     public List<DormBuild> getDormBuilds() {
         return dormBuilds;
     }
 
     public void setDormBuilds(List<DormBuild> dormBuilds) {
         this.dormBuilds = dormBuilds;
-    }
-
-    @Override
-    public String toString() {
-        return "User{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", password='" + password + '\'' +
-                ", stuCode='" + stuCode + '\'' +
-                ", dormCode='" + dormCode + '\'' +
-                ", sex='" + sex + '\'' +
-                ", tel='" + tel + '\'' +
-                ", dormBuildId=" + dormBuildId +
-                ", roleId=" + roleId +
-                ", createUserId=" + createUserId +
-                ", disabled=" + disabled +
-                '}';
     }
 }

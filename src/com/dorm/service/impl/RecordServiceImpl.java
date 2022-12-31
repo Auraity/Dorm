@@ -13,4 +13,9 @@ public class RecordServiceImpl implements RecordService {
     public List<Record> getAllRecords() {
         return recordDao.findAllRecords();
     }
+
+    @Override
+    public List<Record> findRecordsBySearchType(String startDate, String endDate, String dormBuildId, String searchType, String keyword) {
+        return recordDao.findRecordsBySearchType(startDate,endDate,dormBuildId,searchType,keyword);
+    }
 }

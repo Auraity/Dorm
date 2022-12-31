@@ -23,5 +23,5 @@ public interface UserDao {
 
     String findOldPassword(Integer id);
 
-    void setNewPassword(String newPassword,Integer id);
+    int setNewPassword(String newPassword,Integer id);
 }

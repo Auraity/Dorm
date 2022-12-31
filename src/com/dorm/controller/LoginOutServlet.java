@@ -11,10 +11,12 @@ import java.io.IOException;
 @WebServlet("/loginOut.action")
 public class LoginOutServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        HttpSession session = request.getSession();
+        session.removeAttribute("session_user");
+        request.getRequestDispatcher("/").forward(request, response);
+    }
 
-        request.getRequestDispatcher("/.jsp").forward(request,response);
-        }
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        doGet(request,response);
+        doPost(request, response);
     }
 }

@@ -20,4 +20,6 @@ public interface DormBuildService {
     DormBuild getDormBuildById(int id);
 
     void updateDormBuild(DormBuild dormBuild);
+
+    DormBuild findDormBuildById(int id);
 }

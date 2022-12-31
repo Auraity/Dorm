@@ -19,20 +19,36 @@ public class RecordServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         //        防止中文乱码
         request.setCharacterEncoding("utf-8");
-//        1、接收请求
+
         String action=request.getParameter("action");
         if ("list".equals(action)){
-//            查询所有用户
-//            2、调用相应服务//
-            List<Record> records=recordService.getAllRecords();
-//            request.setAttribute("records",records);
-//            3、返回页面
+            String startDate = request.getParameter("startDate");
+            String endDate = request.getParameter("endDate");
+            String dormBuildId = request.getParameter("dormBuildId");
+            String searchType = request.getParameter("searchType");
+            String keyword = request.getParameter("keyword");
+
+            List<Record> records=recordService.findRecordsBySearchType(startDate,endDate,dormBuildId,searchType,keyword);
+           request.setAttribute("records",records);
+
             request.setAttribute("mainRight","recordList.jsp");
             request.getRequestDispatcher("/jsp/main.jsp").forward(request,response);
         }
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        doPost(request,response);
+        //        防止中文乱码
+        request.setCharacterEncoding("utf-8");
+//        1、接收请求
+        String action=request.getParameter("action");
+        if ("list".equals(action)){
+//            查询所有用户
+//            2、调用相应服务//
+            List<Record> records=recordService.getAllRecords();
+            request.setAttribute("records",records);
+//            3、返回页面
+            request.setAttribute("mainRight","recordList.jsp");
+            request.getRequestDispatcher("/jsp/main.jsp").forward(request,response);
+        }
     }
 }

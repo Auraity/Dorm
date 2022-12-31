@@ -23,5 +23,5 @@ public interface UserService {
 
     void saveStudentAndBuilds(User user, String dormBuildIds);
 
-    void changePassword(String oldPassword, String newPassword, Integer id);
+    int changePassword(String oldPassword, String newPassword, Integer id);
 }
