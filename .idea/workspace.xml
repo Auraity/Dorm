@@ -9,7 +9,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c7c54e3b-1a2c-4105-b3d7-eae5aa4aec7a" name="Default Changelist" comment="" />
+    <list default="true" id="c7c54e3b-1a2c-4105-b3d7-eae5aa4aec7a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dorm/controller/RecordServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/dorm/controller/RecordServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dorm/dao/RecordDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/dorm/dao/RecordDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dorm/dao/impl/RecordDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/dorm/dao/impl/RecordDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dorm/service/RecordService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/dorm/service/RecordService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dorm/service/impl/RecordServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/dorm/service/impl/RecordServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/jdbc.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/jdbc.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/jsp/recordList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/jsp/recordList.jsp" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -54,23 +63,23 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2JROJvpYSXvURWYiJXeylWn80xz" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
     <option name="showMembers" value="true" />
     <option name="showVisibilityIcons" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)"
-  }
-}]]></component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+  </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\style\Desktop\Dorm\web\WEB-INF\lib" />
@@ -174,7 +183,7 @@
       </list>
     </option>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -199,6 +208,7 @@
       <workItem from="1672385978787" duration="3817000" />
       <workItem from="1672400255877" duration="179000" />
       <workItem from="1672409690314" duration="1009000" />
+      <workItem from="1672544764215" duration="6928000" />
     </task>
     <task id="LOCAL-00001" summary="测试提交">
       <created>1672409767824</created>
@@ -211,11 +221,89 @@
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
+    <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="测试提交" />
     <option name="LAST_COMMIT_MESSAGE" value="测试提交" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="446" y="70" key="#com.intellij.ide.util.MemberChooser" timestamp="1672547446889">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state x="446" y="70" key="#com.intellij.ide.util.MemberChooser/0.0.1280.720@0.0.1280.720" timestamp="1672547446889" />
+    <state width="845" height="142" key="GridCell.Tab.0.bottom" timestamp="1672551767031">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state width="845" height="142" key="GridCell.Tab.0.bottom/0.0.1280.720@0.0.1280.720" timestamp="1672551767031" />
+    <state width="845" height="142" key="GridCell.Tab.0.center" timestamp="1672551767031">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state width="845" height="142" key="GridCell.Tab.0.center/0.0.1280.720@0.0.1280.720" timestamp="1672551767031" />
+    <state width="845" height="142" key="GridCell.Tab.0.left" timestamp="1672551767031">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state width="845" height="142" key="GridCell.Tab.0.left/0.0.1280.720@0.0.1280.720" timestamp="1672551767031" />
+    <state width="845" height="142" key="GridCell.Tab.0.right" timestamp="1672551767031">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state width="845" height="142" key="GridCell.Tab.0.right/0.0.1280.720@0.0.1280.720" timestamp="1672551767031" />
+    <state width="845" height="142" key="GridCell.Tab.1.bottom" timestamp="1672551767031">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state width="845" height="142" key="GridCell.Tab.1.bottom/0.0.1280.720@0.0.1280.720" timestamp="1672551767031" />
+    <state width="845" height="142" key="GridCell.Tab.1.center" timestamp="1672551767031">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state width="845" height="142" key="GridCell.Tab.1.center/0.0.1280.720@0.0.1280.720" timestamp="1672551767031" />
+    <state width="845" height="142" key="GridCell.Tab.1.left" timestamp="1672551767031">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state width="845" height="142" key="GridCell.Tab.1.left/0.0.1280.720@0.0.1280.720" timestamp="1672551767031" />
+    <state width="845" height="142" key="GridCell.Tab.1.right" timestamp="1672551767031">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state width="845" height="142" key="GridCell.Tab.1.right/0.0.1280.720@0.0.1280.720" timestamp="1672551767031" />
+    <state width="845" height="142" key="GridCell.Tab.2.bottom" timestamp="1672551767031">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state width="845" height="142" key="GridCell.Tab.2.bottom/0.0.1280.720@0.0.1280.720" timestamp="1672551767031" />
+    <state width="845" height="142" key="GridCell.Tab.2.center" timestamp="1672551767031">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state width="845" height="142" key="GridCell.Tab.2.center/0.0.1280.720@0.0.1280.720" timestamp="1672551767031" />
+    <state width="845" height="142" key="GridCell.Tab.2.left" timestamp="1672551767031">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state width="845" height="142" key="GridCell.Tab.2.left/0.0.1280.720@0.0.1280.720" timestamp="1672551767031" />
+    <state width="845" height="142" key="GridCell.Tab.2.right" timestamp="1672551767031">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state width="845" height="142" key="GridCell.Tab.2.right/0.0.1280.720@0.0.1280.720" timestamp="1672551767031" />
+    <state width="845" height="142" key="GridCell.Tab.3.bottom" timestamp="1672551182137">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state width="845" height="142" key="GridCell.Tab.3.bottom/0.0.1280.720@0.0.1280.720" timestamp="1672551182137" />
+    <state width="845" height="142" key="GridCell.Tab.3.center" timestamp="1672551182137">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state width="845" height="142" key="GridCell.Tab.3.center/0.0.1280.720@0.0.1280.720" timestamp="1672551182137" />
+    <state width="845" height="142" key="GridCell.Tab.3.left" timestamp="1672551182137">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state width="845" height="142" key="GridCell.Tab.3.left/0.0.1280.720@0.0.1280.720" timestamp="1672551182137" />
+    <state width="845" height="142" key="GridCell.Tab.3.right" timestamp="1672551182137">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state width="845" height="142" key="GridCell.Tab.3.right/0.0.1280.720@0.0.1280.720" timestamp="1672551182137" />
+    <state x="325" y="185" key="com.intellij.ide.util.TipDialog" timestamp="1672544767846">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state x="325" y="185" key="com.intellij.ide.util.TipDialog/0.0.1280.720@0.0.1280.720" timestamp="1672544767845" />
+    <state x="383" y="0" key="refactoring.ChangeSignatureDialog" timestamp="1672547022503">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state x="383" y="0" key="refactoring.ChangeSignatureDialog/0.0.1280.720@0.0.1280.720" timestamp="1672547022503" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -240,8 +328,18 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/dorm/dao/impl/UserDaoImpl.java</url>
-          <line>357</line>
+          <line>355</line>
           <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/dorm/controller/RecordServlet.java</url>
+          <line>71</line>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/dorm/dao/impl/RecordDaoImpl.java</url>
+          <line>178</line>
+          <option name="timeStamp" value="19" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -2,8 +2,11 @@ package com.dorm.controller;
 
 import com.dorm.pojo.DormBuild;
 import com.dorm.pojo.Record;
+import com.dorm.pojo.User;
 import com.dorm.service.RecordService;
+import com.dorm.service.UserService;
 import com.dorm.service.impl.RecordServiceImpl;
+import com.dorm.service.impl.UserServiceImpl;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -65,6 +68,14 @@ public class RecordServlet extends HttpServlet {
         }else if("preAdd".equals(action)){
             request.setAttribute("mainRight","recordAddOrUpdate.jsp");
             request.getRequestDispatcher("/jsp/main.jsp").forward(request,response);
+        }else if ("deleteOrActive".equals(action)){//删除
+            String id=request.getParameter("id");
+            String disabled=request.getParameter("disabled");
+            Record record=recordService.getRecordById(Integer.parseInt(id));
+            record.setDisabled(Integer.parseInt(disabled));
+            recordService.updateRecordDisabled(record);
+//            3、返回页面
+            response.sendRedirect(getServletContext().getContextPath()+"/record.action?action=list");
         }
     }
 

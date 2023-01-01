@@ -33,4 +33,14 @@ public class RecordServiceImpl implements RecordService {
     public int addRecord(String stuCode, String date, String remark) {
         return recordDao.addRecord(stuCode,date,remark);
     }
+
+    @Override
+    public Record getRecordById(int id) {
+        return recordDao.findRecordByIds(id);
+    }
+
+    @Override
+    public void updateRecordDisabled(Record record) {
+        recordDao.updateRecordDisabled(record);
+    }
 }

@@ -165,6 +165,62 @@ public class RecordDaoImpl implements RecordDao {
             close(null,ps,conn);
         }
     }
+
+    @Override
+    public Record findRecordByIds(int id) {
+        Connection conn=null;
+        PreparedStatement ps=null;
+        ResultSet rs=null;
+        try {
+//            1、注册驱动和获取连接
+            conn= DBUtils.getConnection();
+
+//            2、数据库操作对象
+            String sql="select * from tb_record where id=?";
+            ps=conn.prepareStatement(sql);//预编译
+            ps.setInt(1,id);
+
+//            3、执行sql语句
+            rs=ps.executeQuery();
+
+//            4、处理查询结果集
+            while (rs.next()){
+//                将查询的结果封装到User实体中
+                Record record=new Record();
+                record.setId(rs.getInt("id"));
+                record.setDisabled(rs.getInt("disabled"));
+                return record;
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }finally {
+            close(rs,ps,conn);
+        }
+        return null;
+    }
+
+    @Override
+    public void updateRecordDisabled(Record record) {
+        Connection conn=null;
+        PreparedStatement ps=null;
+        try {
+//            1、注册驱动和获取连接
+            conn= DBUtils.getConnection();
+
+//            2、数据库操作对象
+            String sql="update tb_record set disabled=? where id=?";
+            ps=conn.prepareStatement(sql);//预编译
+            ps.setInt(1,record.getDisabled());
+            ps.setInt(2,record.getId());
+            ps.executeUpdate();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }finally {
+            close(null,ps,conn);
+        }
+    }
+
     private String getStudentID(String stuCode){
         Connection conn = null;
         PreparedStatement ps = null;

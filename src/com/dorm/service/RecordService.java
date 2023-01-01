@@ -1,6 +1,7 @@
 package com.dorm.service;
 
 import com.dorm.pojo.Record;
+import com.dorm.pojo.User;
 
 import java.util.List;
 
@@ -14,4 +15,8 @@ public interface RecordService {
     int updateRecord(String id, String stuCode, String date, String remark);
 
     int addRecord(String stuCode, String date, String remark);
+
+    Record getRecordById(int id);
+
+    void updateRecordDisabled(Record record);
 }

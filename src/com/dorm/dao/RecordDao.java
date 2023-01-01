@@ -14,4 +14,8 @@ public interface RecordDao {
     int updateRecord(String id, String stuCode, String date, String remark);
 
     int addRecord(String stuCode, String date, String remark);
+
+    Record findRecordByIds(int id);
+
+    void updateRecordDisabled(Record record);
 }
